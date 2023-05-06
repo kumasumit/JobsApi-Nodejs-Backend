@@ -3,10 +3,15 @@
 // All imports go here
 import express from "express";
 import dotenv from "dotenv";
+// eslint-disable-next-line no-unused-vars
 import colors from "colors";
+import connectDB from "./config/db.js";
 
 // config dotenv
 dotenv.config();
+
+// Here we are connecting to the MongoDb database
+connectDB();
 
 // express app object
 const app = express();
